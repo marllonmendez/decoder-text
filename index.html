@@ -14,25 +14,27 @@
             <img src='./assets/img/logo.png' alt='Alura'>
         </a>
     </header>
-    <main class='main'>
-        <div class='text__container'>
-            <textarea placeholder='Digite seu texto' class='textarea'></textarea>
-        </div>
-        <div class='warning__container'>
-            <img src='assets/img/exclamation.png' alt='Aviso'>
-            <p class='warning__text'>Apenas letras minúsculas e sem acento.</p>
-        </div>
-        <div class='result__container'>
-            <div class='buttons__container'>
-                <button class='button__encrypt'>Criptografar</button>
-                <button class='button__decrypt'>Descriptografar</button>
+    <main class='main-container'>
+        <div class='input-section'>
+            <div class='input-container'>
+                <textarea placeholder='Digite seu texto' class='text-input'></textarea>
             </div>
-            <div class='text__block__container'>
-                <div class='text__block'>
-                    <h1 class='title'>Nenhuma mensagem encontrada</h1>
-                    <p class='paragraph'>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <div class='panel-section'>
+                <div class='warning-section'>
+                    <img src='assets/img/exclamation.png' alt='Aviso'>
+                    <p class='warning-text'>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class='action-buttons'>
+                    <button class='encrypt-button'>Criptografar</button>
+                    <button class='decrypt-button'>Descriptografar</button>
                 </div>
             </div>
+        </div>
+        <div class='output-section'>
+                <div class='result-container'>
+                    <h1 class='result-title'>Nenhuma mensagem encontrada</h1>
+                    <p class='result-paragraph'>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
         </div>
     </main>
 </body>

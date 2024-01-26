@@ -13,7 +13,7 @@ Este projeto foi desenvolvido como parte do Challenge ONE Iniciante em Programa√
 
 ## Como Usar
 
-- Acesse [marllonmendez](https://github.com/marllonmendez)
+- Acesse [decoderText](https://marllonmendez.github.io/decoderText/)
 
 ## Licen√ßa
 

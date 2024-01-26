@@ -136,20 +136,20 @@ function buttonDecrypt() {
     }
 }
 
-const buttonCopy = async () => {
+async function buttonCopy() {
     try {
-        let textCopy = decryptMessage.value;
-        const isLowerCaseWithoutAccents = /^[a-z]+$/.test(textCopy);
-
-        if (isLowerCaseWithoutAccents) {
-            await navigator.clipboard.writeText(decryptMessage.innerText);
-            console.log('Conteúdo copiado');
+        let text = '';
+        if (/^[a-z]+$/.test(decryptMessage.value)) {
+            text = decryptMessage.value;
         } else {
-            await navigator.clipboard.writeText(decryptMessage.innerHTML);
-            console.log('Conteúdo copiado');
+            text = decryptMessage.innerText;
         }
+
+        await navigator.clipboard.writeText(text);
+        console.log('Conteudo copiado')
+
     } catch (err) {
-        console.error('Falha ao copiar: ', err);
+        window.alert('Erro ao copiar: ' + err);
     }
 }
 

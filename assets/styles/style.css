@@ -7,7 +7,8 @@
     --color-white-primary: #E5E5E5;
     --color-white-second: #FFF;
     --color-blue: #0A3871;
-    --color-gray: #343A40;
+    --color-gray-primary: #343A40;
+    --color-gray-second: #888;
 }
 
 /* Mobile First */
@@ -29,6 +30,18 @@ body {
     background-color: var(--color-white-primary);
 }
 
+a {
+    color: var(--color-white-primary);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--color-gray-second);
+}
+
+
 .logo {
     display: flex;
     padding: 24px 16px;
@@ -37,7 +50,6 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    gap: 32px;
 }
 
 .input-container {
@@ -46,15 +58,28 @@ body {
     align-content: center;
     padding: 56px 16px;
     margin-bottom: 16px;
+    text-transform: lowercase;
 }
 
-.text-input {
+.encrypt-message {
     color: var(--color-blue);
     font-family: var(--font);
     font-size: 2rem;
     font-weight: 400;
     background: none;
     border: none;
+    outline: none;
+    width: 100%;
+}
+
+.decrypt-message {
+    color: var(--color-blue);
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 400;
+    background: none;
+    border: none;
+    outline: none;
     width: 100%;
 }
 
@@ -79,10 +104,9 @@ body {
 }
 
 .warning-text {
-    color: var(--color-gray);
+    color: var(--color-gray-primary);
     font-size: 0.75rem;
     font-weight: 400;
-    line-height: 150%;
 }
 
 .encrypt-button {
@@ -93,7 +117,9 @@ body {
     font-weight: 400;
     align-items: center;
     gap: 8px;
+    border: var(--color-blue) solid 1px;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .decrypt-button {
@@ -106,6 +132,21 @@ body {
     gap: 8px;
     border: var(--color-blue) solid 1px;
     border-radius: 25px;
+    cursor: pointer;
+}
+
+.copy-button {
+    background-color: var(--color-white-primary);
+    color: var(--color-blue);
+    padding: 25px;
+    font-size: 1rem;
+    font-weight: 400;
+    align-items: center;
+    width: 300px;
+    gap: 8px;
+    border: var(--color-blue) solid 1px;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
 .output-section{
@@ -120,29 +161,53 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding: 50px;
     background-color: var(--color-white-second);
     border-radius: 32px;
     gap: 32px;
+    width: 100%;
     box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 .result-title {
-    color: var(--color-gray);
+    color: var(--color-gray-primary);
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
 .result-paragraph {
-    color: var(--color-gray);
+    color: var(--color-gray-primary);
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
 }
 
-/* Tablet Version */
+.result-image {
+    display: none;
+}
 
+.footer-section {
+    color: var(--color-white-primary);
+    background-color: var(--color-blue);
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 0.75rem;
+    padding: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray-second);
+    border-radius: 4px;
+}
+
+/* Tablet Version */
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .logo {
         display: flex;
@@ -150,24 +215,18 @@ body {
     }
 
     .main-container {
-        display: flex;
         padding: 20px 40px;
         gap: 10px;
     }
 
     .input-section, .output-section {
-        flex-direction: column;
-    }
-
-    .input-section {
         display: flex;
         flex-direction: column;
-        gap: 480px;
     }
 
     .action-buttons {
-        padding: 20px;
         flex-direction: row;
+        padding: 20px;
     }
 
     .encrypt-button, .decrypt-button {
@@ -178,4 +237,71 @@ body {
         width: 100%;
         padding: 32px;
     }
+
+    .result-image {
+        display: none;
+    }
+
+    .footer-section {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
 }
+
+/* PC Version */
+@media screen and (min-width: 1500px) and (max-width: 1920px) {
+    .logo {
+        padding: 20px 50px;
+    }
+
+    .main-container {
+        flex-direction: row;
+        align-content: stretch;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .result-container {
+        width: 400px;
+        height: 500px;
+    }
+
+    .decrypt-message {
+        margin-bottom: auto;
+        height: 300px;
+    }
+
+    .result-image {
+        display: block;
+        width: 300px;
+        height: 300px;
+    }
+
+    .result-title {
+        font-size: 1rem;
+    }
+
+    .result-paragraph {
+        font-size: 0.75rem;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+    }
+
+    .encrypt-button, .decrypt-button {
+        width: 50%;
+    }
+
+    .output-section {
+        padding: 0;
+    }
+
+    .footer-section {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+

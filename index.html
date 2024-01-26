@@ -9,15 +9,13 @@
     <link rel='stylesheet' href='./assets/styles/style.css'>
 </head>
 <body>
-    <header>
-        <a class='logo' href='https://github.com/marllonmendez'>
-            <img src='./assets/img/logo.png' alt='Alura'>
-        </a>
+    <header class='logo'>
+        <img src='./assets/img/logo.png' alt='Alura'>
     </header>
     <main class='main-container'>
-        <div class='input-section'>
+        <section class='input-section'>
             <div class='input-container'>
-                <textarea placeholder='Digite seu texto' class='text-input'></textarea>
+                <textarea class='encrypt-message' placeholder='Digite seu texto' cols='41' rows='4'></textarea>
             </div>
             <div class='panel-section'>
                 <div class='warning-section'>
@@ -25,17 +23,21 @@
                     <p class='warning-text'>Apenas letras minúsculas e sem acento.</p>
                 </div>
                 <div class='action-buttons'>
-                    <button class='encrypt-button'>Criptografar</button>
-                    <button class='decrypt-button'>Descriptografar</button>
+                    <button class='encrypt-button' onclick='buttonEncrypt()'>Criptografar</button>
+                    <button class='decrypt-button' onclick='buttonDecrypt()'>Descriptografar</button>
                 </div>
             </div>
-        </div>
-        <div class='output-section'>
-                <div class='result-container'>
-                    <h1 class='result-title'>Nenhuma mensagem encontrada</h1>
-                    <p class='result-paragraph'>Digite um texto que você deseja criptografar ou descriptografar.</p>
-                </div>
-        </div>
+        </section>
+        <section class='output-section'>
+            <div class='result-container'>
+                <textarea class='decrypt-message' cols='20' rows='10'></textarea>
+                <button class='copy-button'>Copiar</button>
+            </div>
+        </section>
     </main>
+    <footer class='footer-section'>
+        <p>Desenvolvido por <a href='https://github.com/marllonmendez' target='_blank'>MarllonMendez</a></p>
+    </footer>
+    <script src='assets/script/app.js' defer></script>
 </body>
 </html>

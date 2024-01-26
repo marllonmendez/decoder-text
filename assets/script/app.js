@@ -7,7 +7,6 @@ const encryptMessage = message('.encrypt-message');
 const decryptMessage = message('.decrypt-message');
 const alertMessage = message('.warning-text');
 const outputSection = message('.output-section');
-const copyButton = message('.copy-button')
 
 const letters = [
     ['a', '@'],
@@ -54,7 +53,7 @@ function updateOutputSection(text) {
     outputSection.innerHTML = `
         <div class='result-container'>
             <textarea class='decrypt-message' cols='20' rows='10'>${text}</textarea>
-            <button class='copy-button' onclick='buttonCopy()'>Copiar</button>
+            <button class='copy-button' onclick='buttonCopy("${text}")'>Copiar</button>
         </div>
     `;
 }
@@ -82,9 +81,7 @@ function encrypt(stringEncrypt) {
 
     for (let index = 0; index < letters.length; index++) {
         if (stringEncrypt.includes(letters[index][0])) {
-            console.log(`Before: ${stringEncrypt}`);
             stringEncrypt = stringEncrypt.replaceAll(letters[index][0], letters[index][1]);
-            console.log(`After: ${stringEncrypt}`);
         }
     }
 
@@ -140,13 +137,11 @@ function buttonDecrypt() {
 }
 
 const buttonCopy = async () => {
-    let text;
-    if (/^[a-z\s]+$/.test(decryptMessage.value)) {
-        // Se contém apenas letras de 'a' até 'z'
-        text = decryptMessage.value;
-    } else {
-        // Se não contém apenas letras, use o HTML
-        text = decryptMessage.innerText;
+    try {
+        let textCopy = decryptMessage.value;
+        await navigator.clipboard.writeText(textCopy);
+        console.log('Conteúdo copiado');
+    } catch (err) {
+        console.error('Falha ao copiar: ', err);
     }
-    await navigator.clipboard.writeText(text);
 }

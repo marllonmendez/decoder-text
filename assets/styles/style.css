@@ -211,7 +211,7 @@ button:hover {
 }
 
 /* Tablet Version */
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 820px) and (min-width: 1024px) and  (max-width: 1200px){
     .logo {
         display: flex;
         padding: 72px 40px;
@@ -222,7 +222,8 @@ button:hover {
         gap: 10px;
     }
 
-    .input-section, .output-section {
+    .input-section,
+    .output-section {
         display: flex;
         flex-direction: column;
     }
@@ -232,7 +233,8 @@ button:hover {
         padding: 20px;
     }
 
-    .encrypt-button, .decrypt-button {
+    .encrypt-button,
+    .decrypt-button {
         width: 50%;
     }
 
@@ -244,12 +246,14 @@ button:hover {
     .footer-section {
         position: fixed;
         bottom: 0;
+        left: 0;
+        right: 0;
         width: 100%;
     }
 }
 
 /* PC Version */
-@media screen and (min-width: 1500px) and (max-width: 1920px) {
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
     .logo {
         padding: 20px 50px;
     }

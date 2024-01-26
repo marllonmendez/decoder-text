@@ -139,18 +139,12 @@ function buttonDecrypt() {
     }
 }
 
-async function buttonCopy() {
-    try {
-        let text = '';
-        if (/^[a-z]+$/.test(decryptMessage.value)) {
-            text = decryptMessage.value;
-        } else {
-            text = decryptMessage.innerText;
-        }
-
-        await navigator.clipboard.writeText(text);
-
-    } catch (err) {
-        window.alert('Erro ao copiar: ' + err);
+const buttonCopy = async () => {
+    let text;
+    if (/^[a-z\s]+$/.test(decryptMessage.value)) {
+        text = decryptMessage.value;
+    } else {
+        text = decryptMessage.innerText;
     }
+    await navigator.clipboard.writeText(text);
 }

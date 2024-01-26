@@ -172,19 +172,15 @@ a:hover {
 .result-title {
     color: var(--color-gray-primary);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 .result-paragraph {
     color: var(--color-gray-primary);
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 400;
-}
-
-.result-image {
-    display: none;
 }
 
 .footer-section {
@@ -238,10 +234,6 @@ a:hover {
         padding: 32px;
     }
 
-    .result-image {
-        display: none;
-    }
-
     .footer-section {
         position: fixed;
         bottom: 0;
@@ -278,12 +270,8 @@ a:hover {
         height: 300px;
     }
 
-    .result-title {
-        font-size: 1rem;
-    }
-
-    .result-paragraph {
-        font-size: 0.75rem;
+    .result-title, .result-paragraph {
+        font-size: 0.90rem;
     }
 
     .action-buttons {
@@ -304,4 +292,3 @@ a:hover {
         width: 100%;
     }
 }
-

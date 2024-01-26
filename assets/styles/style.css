@@ -45,6 +45,10 @@ textarea {
     resize: none;
 }
 
+button:hover {
+    box-shadow: 0 0 35px var(--color-blue);
+}
+
 .logo {
     display: flex;
     padding: 24px 16px;

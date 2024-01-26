@@ -139,9 +139,17 @@ function buttonDecrypt() {
 const buttonCopy = async () => {
     try {
         let textCopy = decryptMessage.value;
-        await navigator.clipboard.writeText(textCopy);
-        console.log('Conteúdo copiado');
+        const isLowerCaseWithoutAccents = /^[a-z]+$/.test(textCopy);
+
+        if (isLowerCaseWithoutAccents) {
+            await navigator.clipboard.writeText(decryptMessage.innerText);
+            console.log('Conteúdo copiado');
+        } else {
+            await navigator.clipboard.writeText(decryptMessage.innerHTML);
+            console.log('Conteúdo copiado');
+        }
     } catch (err) {
         console.error('Falha ao copiar: ', err);
     }
 }
+

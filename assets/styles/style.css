@@ -41,6 +41,9 @@ a:hover {
     color: var(--color-gray-second);
 }
 
+textarea {
+    resize: none;
+}
 
 .logo {
     display: flex;

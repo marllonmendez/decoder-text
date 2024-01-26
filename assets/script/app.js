@@ -7,6 +7,7 @@ const encryptMessage = message('.encrypt-message');
 const decryptMessage = message('.decrypt-message');
 const alertMessage = message('.warning-text');
 const outputSection = message('.output-section');
+const copyButton = message('.copy-button')
 
 const letters = [
     ['a', '@'],
@@ -138,18 +139,18 @@ function buttonDecrypt() {
     }
 }
 
-function buttonCopy() {
-    const copyValue = document.createElement('textarea');
+async function buttonCopy() {
+    try {
+        let text = '';
+        if (/^[a-z]+$/.test(decryptMessage.value)) {
+            text = decryptMessage.value;
+        } else {
+            text = decryptMessage.innerText;
+        }
 
-    if (/^[a-z]+$/.test(decryptMessage.value)) {
-        copyValue.value = decryptMessage.value;
-    } else {
-        copyValue.value = decryptMessage.innerText;
+        await navigator.clipboard.writeText(text);
+
+    } catch (err) {
+        window.alert('Erro ao copiar: ' + err);
     }
-
-    document.body.appendChild(copyValue);
-    copyValue.select();
-
-    document.execCommand('copy');
-    document.body.removeChild(copyValue);
 }

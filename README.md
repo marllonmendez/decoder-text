@@ -11,12 +11,11 @@
 [![HTML](https://img.shields.io/badge/HTLM-0A3871?style=for-the-badge&logo=html5&logoColor=white)](https://html.com/)
 [![CSS](https://img.shields.io/badge/CSS-0A3871?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3schools.com/css/)
 
-
 </div>
 
 ## Sobre
 
-Este projeto foi desenvolvido como parte do Challenge ONE, um desafio da formação Iniciante em Programação, com o proposito de colocar em prática os conhecimentos abordados.
+Este projeto foi desenvolvido como parte do Challenge ONE, um desafio da formação Iniciante em Programação na plataforma Alura em parceria com a Oracle, com o proposito de colocar em prática os conhecimentos abordados.
 O [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-education/) é um programa de educação e empregabilidade com objetivo social de capacitar pessoas em tecnologia e conectá-las com o mercado de trabalho por meio de empresas parceiras.
 
 ## Funcionalidades

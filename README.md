@@ -21,7 +21,7 @@ O [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-educat
 
 ## Funcionalidades
 
-- **Criptação:** Oferece a capacidade de criptar mensagens, trocando letras do alfabeto por caracteres.
+- **Criptação:** Oferece a capacidade de criptar mensagens, trocando letras do alfabeto por caracteres;
 - **Descriptação:** Oferece a capacidade de descriptar mensagens, trocando caracteres por letras do alfabeto.
 
 ## Como usar

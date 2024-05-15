@@ -23,6 +23,15 @@ O [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-educat
 - **Criptação:** Oferece a capacidade de criptar mensagens, trocando letras do alfabeto por caracteres;
 - **Descriptação:** Oferece a capacidade de descriptar mensagens, trocando caracteres por letras do alfabeto.
 
+## Badge
+Este é um badge conquistado por ter desenvolvido este projeto com a Alura em parceria da Oracle para o programa One **"Oracle Next Education"**
+
+<div align="center">
+
+![Badge](assets/img/badge.png)
+
+</div>
+
 ## Como usar
 
 - Acesse o site [Decodificador de Texto](https://marllonmendez.github.io/decoderText/)

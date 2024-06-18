@@ -25,7 +25,7 @@ O [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-educat
 
 ## Como usar
 
-- Acesse o site [Decodificador de Texto](https://marllonmendez.github.io/DecoderText/)
+- Acesse o site [Decodificador de Texto](https://marllonmendez.github.io/decoder-text/)
 
 ## Badge
 Este é um badge conquistado por ter desenvolvido este projeto com a Alura em parceria da Oracle para o programa One **"Oracle Next Education"**
